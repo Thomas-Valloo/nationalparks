@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.valloo.demo.nationalparks.ui.home.HomeFragment"
+        android:label="@string/home_title"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_parkList"
+            app:destination="@id/navigation_parkList" />
+        <action
+            android:id="@+id/action_navigation_home_to_eventViewPager"
+            app:destination="@id/navigation_eventViewPager" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_parkList"
+        android:name="com.valloo.demo.nationalparks.ui.park.list.ParkListFragment"
+        android:label="@string/parkList_title"
+        tools:layout="@layout/fragment_parklist">
+        <action
+            android:id="@+id/action_navigation_parkList_to_parkDetail"
+            app:destination="@id/navigation_parkDetail">
+            <argument
+                android:name="id"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_parkDetail"
+        android:name="com.valloo.demo.nationalparks.ui.park.detail.ParkDetailFragment"
+        tools:layout="@layout/fragment_parkdetail"/>
+
+    <fragment
+        android:id="@+id/navigation_eventViewPager"
+        android:name="com.valloo.demo.nationalparks.ui.event.EventViewPagerFragment"
+        android:label="@string/eventList_title"
+        tools:layout="@layout/fragment_event_viewpager"/>
+
+    <!--Settings fragment-->
+    <fragment
+        android:id="@+id/navigation_settingsFragment"
+        android:name="com.valloo.demo.nationalparks.ui.settings.SettingsFragment"
+        android:label="@string/pref_settings_fragment_label"/>
+
+    <!--Global action-->
+    <action
+        android:id="@+id/navigation_settings"
+        app:destination="@id/navigation_settingsFragment" />
+
+
+</navigation>

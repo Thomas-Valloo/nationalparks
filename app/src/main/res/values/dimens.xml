@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="font_size_headline">20sp</dimen>
+    <dimen name="font_size_title">16sp</dimen>
+    <dimen name="font_size_body">12sp</dimen>
+</resources>

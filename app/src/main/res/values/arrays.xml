@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="preferences_refresh_strategy_entries">
+        <item>@string/pref_refresh_strategy_always</item>
+        <item>@string/pref_refresh_strategy_1_minute</item>
+        <item>@string/pref_refresh_strategy_5_minutes</item>
+        <item>@string/pref_refresh_strategy_day</item>
+        <item>@string/pref_refresh_strategy_never</item>
+    </string-array>
+    <string-array name="preferences_refresh_strategy_values">
+        <item>ALWAYS</item>
+        <item>MINUTE</item>
+        <item>MINUTES_FIVE</item>
+        <item>DAY</item>
+        <item>NEVER</item>
+    </string-array>
+</resources>
